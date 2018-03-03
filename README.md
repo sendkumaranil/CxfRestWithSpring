@@ -64,5 +64,16 @@ There are two resources:
 <br>
 
 2. Valid Booking Request:<br>
-	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/valid_search_request.PNG)
+	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/valid_booking_request.PNG)
 
+3. Invalid Search Request -Invalid source/destination:<br>
+	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_search-request_1.PNG)
+<br>
+
+4. Invalid Search Request -Same source/destination:<br>
+	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_search-request_2.PNG)
+<br>
+
+5. Invalid Booking Request -Invalid Flight Id:<br>
+	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_booking_request.PNG)
+<br>
