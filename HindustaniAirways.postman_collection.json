@@ -1,0 +1,247 @@
+{
+	"id": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+	"name": "HindustaniAirways",
+	"description": "",
+	"order": [
+		"d204dc31-2c86-898e-24dd-cabe5dbd931b",
+		"cfc89806-a188-ff58-3e5b-82e91c31bf77",
+		"591f5286-1375-0070-9dbe-f07cac14bada",
+		"a18e86fa-c63d-b6b4-c65d-7d3b69d8f6d4",
+		"11a062a7-53d3-e697-14b2-088e4f580203"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1520061908301,
+	"owner": 0,
+	"public": false,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0092ab76-b3b7-4ac2-af8d-3cad03b30103",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4bdb98bb-da2d-4d7f-9df6-24d6de88a8d1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "11a062a7-53d3-e697-14b2-088e4f580203",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=bangalore&destination=bangalore&travel_date=12/03/2018",
+			"queryParams": [
+				{
+					"key": "source",
+					"value": "bangalore",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "destination",
+					"value": "bangalore",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "travel_date",
+					"value": "12/03/2018",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=bangalore&destination=bangalore&travel_date=12/03/2018",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1520105193700,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "591f5286-1375-0070-9dbe-f07cac14bada",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "POST",
+			"collectionId": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1520105133759,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\n\t\"flightId\":\"HINAIR\",\n\t\"travelDate\":\"12/03/2018\",\n\t\"passengerGovtid\":\"ADKSK7835M\",\n\t\"idType\":\"PAN\"\n}"
+		},
+		{
+			"id": "a18e86fa-c63d-b6b4-c65d-7d3b69d8f6d4",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&destination=bang&travel_date=12/03/2018",
+			"queryParams": [
+				{
+					"key": "source",
+					"value": "delhi",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "destination",
+					"value": "bang",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "travel_date",
+					"value": "12/03/2018",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&destination=bang&travel_date=12/03/2018",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1520105170080,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "cfc89806-a188-ff58-3e5b-82e91c31bf77",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1520082312579,
+			"name": "http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/",
+			"description": "",
+			"collectionId": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\n\t\"flightId\":\"INDGO12345\",\n\t\"travelDate\":\"12/03/2018\",\n\t\"passengerGovtid\":\"ADKSK7835M\",\n\t\"idType\":\"PAN\"\n}"
+		},
+		{
+			"id": "d204dc31-2c86-898e-24dd-cabe5dbd931b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&travel_date=12/03/2018&destination=Bangalore",
+			"queryParams": [
+				{
+					"key": "source",
+					"value": "delhi",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "travel_date",
+					"value": "12/03/2018",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "destination",
+					"value": "Bangalore",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "8f1c5b0b-1d58-5f22-3fd9-c9ff22c3eed2",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&travel_date=12/03/2018&destination=Bangalore",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1520061912486,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"id\":1,\n\t\"name\":\"AK\"\n\t\n}"
+		}
+	]
+}
