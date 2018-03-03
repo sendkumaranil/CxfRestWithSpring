@@ -48,64 +48,79 @@ There are two resources:
 	Endpoint URL:http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&destination=bangalore&travel_date=12/03/2018
 	
 	Response:application/json
-	{
-    "flightDetails": [
-        {
-            "flight_id": "HINAIR215123",
-            "flight_name": "Hindustani Airways",
-            "source": "delhi",
-            "destination": "bangalore",
-            "travel_date": "12/03/2018",
-            "travel_hours": "3:00 HOURS",
-            "dep_time": "10:30 Hours",
-            "stop": 1,
-            "stopage_airport": "Kolkata",
-            "stopage_hours": "1:00 HOUR",
-            "total_fare": 3445.76
-        },
-        {
-            "flight_id": "HINAIR215125",
-            "flight_name": "Hindustani Airways",
-            "source": "delhi",
-            "destination": "bangalore",
-            "travel_date": "12/03/2018",
-            "travel_hours": "5:00 HOURS",
-            "dep_time": "19:30 Hours",
-            "stop": 2,
-            "stopage_airport": "Mumbai,Panji",
-            "stopage_hours": "2:00 HOUR",
-            "total_fare": 5575
-        }
-    ]
-	}
+				{
+				"flightDetails": [
+					{
+						"flight_id": "HINAIR215123",
+						"flight_name": "Hindustani Airways",
+						"source": "delhi",
+						"destination": "bangalore",
+						"travel_date": "12/03/2018",
+						"travel_hours": "3:00 HOURS",
+						"dep_time": "10:30 Hours",
+						"stop": 1,
+						"stopage_airport": "Kolkata",
+						"stopage_hours": "1:00 HOUR",
+						"total_fare": 3445.76
+					},
+					{
+						"flight_id": "HINAIR215125",
+						"flight_name": "Hindustani Airways",
+						"source": "delhi",
+						"destination": "bangalore",
+						"travel_date": "12/03/2018",
+						"travel_hours": "5:00 HOURS",
+						"dep_time": "19:30 Hours",
+						"stop": 2,
+						"stopage_airport": "Mumbai,Panji",
+						"stopage_hours": "2:00 HOUR",
+						"total_fare": 5575
+					}
+				]
+				}
 2. Booking Flight
 	Booking flight is POST request which will ask flight id, travel date and passenger details.
 	This resource will response booking details for passenger.
 	
 	Endpoint:http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/
 	Request: application/json
-	{
-	"flightId":"HINAIR215125",
-	"travelDate":"12/03/2018",
-	"passengerGovtid":"ADKSK7835M",
-	"idType":"PAN"
-	}
+				{
+				"flightId":"HINAIR215125",
+				"travelDate":"12/03/2018",
+				"passengerGovtid":"ADKSK7835M",
+				"idType":"PAN"
+				}
 	Response:application/xml
-	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<BookingDetails>
-		<arrivalAirport>Kempugowda Internation Airport- Terminal-III</arrivalAirport>
-		<boardingTime>19:30 Hours</boardingTime>
-		<bookingAmount>5575.0</bookingAmount>
-		<depAirport>Indira Gandhi International Airport-Terminal-II</depAirport>
-		<destination>Bangalore</destination>
-		<flightId>HINAIR215125</flightId>
-		<flightName>Hindustani Airways</flightName>
-		<govtId>ADKSK7835M</govtId>
-		<govtIdType>PAN</govtIdType>
-		<journeyDate>12/03/2018</journeyDate>
-		<source>Delhi</source>
-		<stop>2</stop>
-		<stopageAirport>Mumbai,Hydrabad</stopageAirport>
-		<stopageHours>2:00 HOUR</stopageHours>
-	</BookingDetails>
-	
+				<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+				<BookingDetails>
+					<arrivalAirport>Kempugowda Internation Airport- Terminal-III</arrivalAirport>
+					<boardingTime>19:30 Hours</boardingTime>
+					<bookingAmount>5575.0</bookingAmount>
+					<depAirport>Indira Gandhi International Airport-Terminal-II</depAirport>
+					<destination>Bangalore</destination>
+					<flightId>HINAIR215125</flightId>
+					<flightName>Hindustani Airways</flightName>
+					<govtId>ADKSK7835M</govtId>
+					<govtIdType>PAN</govtIdType>
+					<journeyDate>12/03/2018</journeyDate>
+					<source>Delhi</source>
+					<stop>2</stop>
+					<stopageAirport>Mumbai,Hydrabad</stopageAirport>
+					<stopageHours>2:00 HOUR</stopageHours>
+				</BookingDetails>
+
+1. Valid Search Request:<br>
+![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/valid_search_request.PNG)
+<br>
+2. Valid Booking Request
+![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/valid_search_request.PNG)
+<br>
+3. Invalid Search Request -Invalid source/destination
+![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_search-request_1.PNG)
+<br>
+4. Invalid Search Request -Same source/destination
+![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_search-request_2.PNG)
+<br>
+5. Invalid Booking Request -Invalid Flight Id
+![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_booking_request.PNG)
+<br>
