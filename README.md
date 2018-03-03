@@ -46,12 +46,66 @@ There are two resources:
 	This resource will response complete list of flights available for that request parameter.
 	
 	Endpoint URL:http://localhost:8080/cxfrest/rservice/hindustani-airways/search?source=delhi&destination=bangalore&travel_date=12/03/2018
-
+	
+	Response:application/json
+	{
+    "flightDetails": [
+        {
+            "flight_id": "HINAIR215123",
+            "flight_name": "Hindustani Airways",
+            "source": "delhi",
+            "destination": "bangalore",
+            "travel_date": "12/03/2018",
+            "travel_hours": "3:00 HOURS",
+            "dep_time": "10:30 Hours",
+            "stop": 1,
+            "stopage_airport": "Kolkata",
+            "stopage_hours": "1:00 HOUR",
+            "total_fare": 3445.76
+        },
+        {
+            "flight_id": "HINAIR215125",
+            "flight_name": "Hindustani Airways",
+            "source": "delhi",
+            "destination": "bangalore",
+            "travel_date": "12/03/2018",
+            "travel_hours": "5:00 HOURS",
+            "dep_time": "19:30 Hours",
+            "stop": 2,
+            "stopage_airport": "Mumbai,Panji",
+            "stopage_hours": "2:00 HOUR",
+            "total_fare": 5575
+        }
+    ]
+	}
 2. Booking Flight
 	Booking flight is POST request which will ask flight id, travel date and passenger details.
 	This resource will response booking details for passenger.
 	
 	Endpoint:http://localhost:8080/cxfrest/rservice/hindustani-airways/booking/
-
-
+	Request: application/json
+	{
+	"flightId":"HINAIR215125",
+	"travelDate":"12/03/2018",
+	"passengerGovtid":"ADKSK7835M",
+	"idType":"PAN"
+	}
+	Response:application/xml
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<BookingDetails>
+		<arrivalAirport>Kempugowda Internation Airport- Terminal-III</arrivalAirport>
+		<boardingTime>19:30 Hours</boardingTime>
+		<bookingAmount>5575.0</bookingAmount>
+		<depAirport>Indira Gandhi International Airport-Terminal-II</depAirport>
+		<destination>Bangalore</destination>
+		<flightId>HINAIR215125</flightId>
+		<flightName>Hindustani Airways</flightName>
+		<govtId>ADKSK7835M</govtId>
+		<govtIdType>PAN</govtIdType>
+		<journeyDate>12/03/2018</journeyDate>
+		<source>Delhi</source>
+		<stop>2</stop>
+		<stopageAirport>Mumbai,Hydrabad</stopageAirport>
+		<stopageHours>2:00 HOUR</stopageHours>
+	</BookingDetails>
 	
