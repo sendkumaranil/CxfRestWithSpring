@@ -77,3 +77,8 @@ There are two resources:
 5. Invalid Booking Request -Invalid Flight Id:<br>
 	![alt tag](https://github.com/sendkumaranil/CxfRestWithSpring/blob/master/Invalid_booking_request.PNG)
 <br>
+
+<p><b>Note:</b>After successfully setup this project download postman collection and import in postman client and run</p>
+
+<h4>Thank You</h4>
+<h5>Anil Kumar</h5>
