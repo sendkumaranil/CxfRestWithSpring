@@ -1,13 +1,16 @@
 package com.cxf.rest.example.model;
 
+import javax.validation.constraints.NotNull;
+
 public class BookFlightRequest {
 
 	 private String flightId;
 	 private String travelDate;
-	 private String passengerGovtid;	
+	 @NotNull(message="please provide governtment id proof")
+	 private String passengerGovtid;
 	 private String idType;
-	
-		
+
+
 	public String getFlightId() {
 		return flightId;
 	}

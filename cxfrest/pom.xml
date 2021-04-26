@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>cxfrest Maven Webapp</name>
-  <url>http://maven.apache.org</url>  
+  <url>http://maven.apache.org</url>
   <dependencies>
   <dependency>
 			<groupId>junit</groupId>
@@ -88,7 +88,7 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http</artifactId>
 			<version>3.0.3</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 		    <groupId>org.apache.cxf</groupId>
 		    <artifactId>cxf-rt-transports-http-jetty</artifactId>
@@ -109,6 +109,11 @@
 		    <artifactId>jackson-jaxrs-json-provider</artifactId>
 		    <version>2.9.4</version>
 		</dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>5.1.0.Final</version>
+    </dependency>
   </dependencies>
   <build>
 		<plugins>

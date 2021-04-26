@@ -6,7 +6,7 @@
 		xmlns:jaxrs="http://cxf.apache.org/jaxrs"
 		xsi:schemaLocation="
 			http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
-			http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans
 			http://www.springframework.org/schema/beans/spring-beans.xsd
 			http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
 			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
@@ -21,15 +21,20 @@
     </cxf:bus>
 
 	<bean id="flightResource" class="com.cxf.rest.example.resource.HindustaniAirwaysResource"/>
-	<bean id="jsonProvider" 
+	<bean id="jsonProvider"
 		class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
-	
+	<bean id="validationInInterceptor" class="org.apache.cxf.jaxrs.validation.JAXRSBeanValidationInInterceptor"/>
+	<bean id="validationExceptionMapper" class="com.cxf.rest.example.util.ConstraintValidationExcepMapper"/>
   	<jaxrs:server id="hindairwaysrs" address="/rservice">
   		<jaxrs:serviceBeans>
   			<ref bean="flightResource"/>
   		</jaxrs:serviceBeans>
-  		<jaxrs:providers>
-			<ref bean='jsonProvider' />
+			<jaxrs:inInterceptors>
+  			<ref bean='validationInInterceptor' />
+  		</jaxrs:inInterceptors>
+			<jaxrs:providers>
+				<list><ref bean='jsonProvider' /></list>
+			<list><ref bean='validationExceptionMapper' /></list>
 		</jaxrs:providers>
   	</jaxrs:server>
 
